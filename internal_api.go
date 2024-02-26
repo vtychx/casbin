@@ -44,13 +44,13 @@ func (e *Enforcer) addPolicyWithoutNotify(sec string, ptype string, rule []strin
 		return false, nil
 	}
 
-	if e.shouldPersist() {
-		if err := e.adapter.AddPolicy(sec, ptype, rule); err != nil {
-			if err.Error() != notImplemented {
-				return false, err
-			}
-		}
-	}
+	// if e.shouldPersist() {
+	// 	if err := e.adapter.AddPolicy(sec, ptype, rule); err != nil {
+	// 		if err.Error() != notImplemented {
+	// 			return false, err
+	// 		}
+	// 	}
+	// }
 
 	e.model.AddPolicy(sec, ptype, rule)
 
