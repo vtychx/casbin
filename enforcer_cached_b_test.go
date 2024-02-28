@@ -26,7 +26,7 @@ func BenchmarkCachedRaw(b *testing.B) {
 }
 
 func BenchmarkCachedBasicModel(b *testing.B) {
-	e, _ := NewCachedEnforcer("examples/basic_model.conf", "examples/basic_policy.csv", false)
+	e, _ := NewCachedEnforcer("examples111/basic_model.conf", "examples/basic_policy.csv", false)
 
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
